@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="input.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/6b90a087a7.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <div class=" w-full mx-auto md:w-1/2 md:mx-auto min-h-screen max-h-auto px-2 shadow-purple-900 shadow-xl  ">
+    <h1
+      class=" bg-clip-text text-transparent bg-gradient-to-r from-blue-950 to-blue-700 text-5xl text-center font-extrabold font-serif">
+      TO<span>D<i class="fa-regular fa-circle-check font-extrabold  "></i></span></h1>
+    <div class="flex mx-auto w-full mt-5">
+      <div class="text-blue-900 text-3xl text-center font-extrabold font-serif" id="date">
+      </div>
+      <div class="flex flex-col  ">
+        <div class="-mb-2 mt-2 text-blue-900 text-xl text-center font-extrabold font-serif leading-tight" id="month">
+        </div>
+        <div class="text-blue-900 text-xl text-center font-extrabold font-serif leading-tight" id="year">
+        </div>
+      </div>
+      <div class="text-2xl text-end w-full text-blue-900 font-extrabold font-serif pt-4" id="day">
+      </div>
+    </div>
+
+    <fieldset class="w-full h-40 relative mt-5  ">
+      <legend class="flex ">
+        <img src="./images/todo_image-removebg-preview.png" alt="" class="w-16">
+        <p class="absolute top-7 left-16 text-xl font-semibold font-serif text-blue-900">Add TODOs</p>
+      </legend>
+      <div class="flex justify-between mt-4  ">
+        <input type="text" class="text-lg font-serif  w-3/4 h-10 ms-4 mt-2 rounded-tl-3xl rounded-br-3xl ps-3 focus:outline-purple-500 " id="inp" onkeypress="enter()">
+        <button class=" h-5 w-18 outline-none shadow-lg transform active:scale-75 transition-transform  " onclick="add()"><i
+            class="fa-solid fa-square-plus text-4xl text-blue-950 mt-2"></i></button>
+      </div>
+    </fieldset>
+
+
+    <fieldset class=" w-full  max-h-screen  relative mt-5">
+      <legend class="flex ">
+        <img src="./images/for 2nd legend.png" alt="" class="w-16">
+        <p class="absolute top-6 left-16 text-xl font-semibold font-serif text-blue-900">TODO LIST</p>
+        <button id="delAll" class="absolute top-6 right-0 outline-none shadow-lg transform active:scale-75 transition-transform" onclick="deleteAll()"><i
+            class="fa-solid fa-trash text-4xl text-blue-950"></i></button>
+      </legend>
+
+      <div class="">
+        <ul id="ul" class=" py-4 ">
+
+
+
+        </ul>
+
+      </div>
+    </fieldset>
+
+    <!-- =======FOR TODO APP======== -->
+
+    <!-- <input type="text" id="inp" class="bg-red-400 ">
+  <button onclick="add()">Add</button>
+  <button onclick="deleteAll()">Delete All</button>
+  
+  <ul id="ul">
+       its li will made by javascript to prevent loading with page. -->
+    <!-- </ul>  -->
+
+
+    <script src="todo-app.js"></script>
+
+</body>
+
+</html>
