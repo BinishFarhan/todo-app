@@ -11,3 +11,21 @@ body{
     
 }
 
+
+.custom-swal-font{
+    font-size: 17px;
+    color:rgb(6, 6, 95)e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.custom-swal{
+    width: 250px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.swal2-styled{
+    background: #172554 !important;
+    /* box-shadow: none !important; */
+}
+

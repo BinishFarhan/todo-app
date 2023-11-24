@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="input.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/6b90a087a7.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
 </head>
 
@@ -33,10 +34,11 @@
         <img src="./images/todo_image-removebg-preview.png" alt="" class="w-16">
         <p class="absolute top-7 left-16 text-xl font-semibold font-serif text-blue-900">Add TODOs</p>
       </legend>
-      <div class="flex justify-between mt-4  ">
-        <input type="text" class="text-lg font-serif  w-3/4 h-10 ms-4 mt-2 rounded-tl-3xl rounded-br-3xl ps-3 focus:outline-purple-500 " id="inp" onkeypress="enter()">
-        <button class=" h-5 w-18 outline-none shadow-lg transform active:scale-75 transition-transform  " onclick="add()"><i
-            class="fa-solid fa-square-plus text-4xl text-blue-950 mt-2"></i></button>
+      <div class="flex justify-between mt-4">
+        <input id="inp" type="text" class="text-lg font-serif  w-3/4 h-10 ms-4 mt-2 rounded-tl-3xl rounded-br-3xl ps-3 focus:outline-none " 
+        id="inp" onkeyup="enter()" onkeypress="enabledbtn(event)" onkeydown="enabledbtn(event)" >
+        <button id="add" class=" h-5 w-18 outline-none shadow-lg" onclick="add()" disabled><i
+            class="fa-solid fa-square-plus text-4xl text-gray-200 mt-2"></i></button>
       </div>
     </fieldset>
 
@@ -45,7 +47,7 @@
       <legend class="flex ">
         <img src="./images/for 2nd legend.png" alt="" class="w-16">
         <p class="absolute top-6 left-16 text-xl font-semibold font-serif text-blue-900">TODO LIST</p>
-        <button id="delAll" class="absolute top-6 right-0 outline-none shadow-lg transform active:scale-75 transition-transform" onclick="deleteAll()"><i
+        <button id="delAll" class="absolute top-6 right-0 outline-none shadow-lg " onclick="deleteAll()"><i
             class="fa-solid fa-trash text-4xl text-blue-950"></i></button>
       </legend>
 
